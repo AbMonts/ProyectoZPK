@@ -1,13 +1,16 @@
 pragma circom 2.0.0;
 
-template Multiplicador() {
+template SumProd() {
     signal input a;
     signal input b;
-    signal output c; // Corrección: 'output' para la salida
+    
+    signal output sum;
+    signal output product;
 
-    // Esto obliga a que 'c' sea estrictamente el resultado de 'a * b'
-    c <== a * b; 
+    // constraints
+    sum <== a + b; 
+    product <== a * b; 
 }
 
 // Esto le dice a Circom cuál es el componente principal que va a compilar
-component main = Multiplicador(); 
+component main = SumProd(); 
