@@ -1,0 +1,59 @@
+# =========================
+# Node.js / Dependencias
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# =========================
+# ZK / Circom / SnarkJS / Build
+# =========================
+# Evita subir artefactos pesados de compilación, circuitos traducidos y testigos
+build/
+output/
+pot*.ptau
+*.zkey
+*.json
+!package.json
+!package-lock.json
+
+# Excepciones útiles si deseas mantener llaves o pruebas específicas en control de versiones 
+# (Comenta o descomenta según tus necesidades)
+# !build/verification_key.json
+# !build/public.json
+
+# =========================
+# Entornos y Variables de Entorno
+# =========================
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Editores y IDEs
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# =========================
+# Sistema Operativo
+# =========================
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS / Linux
+.DS_Store
+.AppleDouble
+.LSOverride
+*~
+.directory
